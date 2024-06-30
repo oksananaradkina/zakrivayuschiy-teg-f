@@ -4,3 +4,38 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-light {
+    --main-font: Inter-Variable, sans-serif;
+    --accent-font: PressStart2P, sans-serif;
+    --bold-text: 700;
+    --regular-text: 400;
+    --page-background-color: var(--color-white);
+    --page-background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7 .01%, #1a1a1a);
+    --accent-color:  var(--color-black);
+    --button-text-color: var(--color-white);
+    --floppy-button: var(--color-white);
+    --box-shadow:var(--color-black);
+    --color--state-start--icon-like--main-body:var(--color-black);
+    --color--state-start--icon-like--core:var(--color-black);
+    --color--state-start--icon-like--initial:var(--color-black);
+    --color--state-end--icon-like--main-body:var(--color-red);
+    --color--state-end--icon-like--core:var(--color-red);
+}
+
+:root.theme-dark {
+    --main-font: Inter-Variable, sans-serif;
+    --accent-font: PressStart2P, sans-serif;
+    --bold-text: 785;
+    --regular-text: 465;
+    --page-background-color: var(--color-black);
+    --accent-color:  var(--color-green);
+    --page-background-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px), repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px), linear-gradient(#007f0c, #004306);
+    --button-text-color: var(--color-green);
+    --floppy-button: var(--color-green);
+    --box-shadow: var(--color-green);
+    --color--state-start--icon-like--main-body:var(--color-green);
+    --color--state-start--icon-like--core:var(--color-green);
+    --color--state-start--icon-like--initial:var(--color-green);
+    --color--state-end--icon-like--main-body:var(--color-red);
+    --color--state-end--icon-like--core:var(--color-red);
+}

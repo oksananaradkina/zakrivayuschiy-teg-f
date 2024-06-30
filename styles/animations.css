@@ -11,4 +11,169 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
+
+
+
+
+
+.like-icon {
+    transform: scale(1);
+    cursor: pointer;
+    animation-direction: alternate;
+}
+
+.like-icon:active {
+    animation-delay: 0.06s;
+    animation-duration: 0.3s;
+    animation-name: myAnimation;
+}
+
+@keyframes myAnimation {
+    0% {
+        background-image: url("/images/initial.svg");
+        animation-delay: 0.1s;
+        background-color: var(--color--state-start--icon-like--main-body);
+    }
+    20% {
+        background-image: url("/images/starting-black.svg");
+        background-color: var(--color--state-start--icon-like--main-body);
+    }
+    40% {
+        background-image: url("/images/glow-black.svg");
+        background-color: var(--color--state-start--icon-like--main-body);
+    }
+    60% {
+        background-image: url("/images/big.svg");
+        background-color: var( --color--state-end--icon-like--main-body);
+    }
+    80% {
+        background-image: url("/images/sparkles.svg");
+        background-color: var( --color--state-end--icon-like--main-body);
+    }
+    100% {
+        background-image: url("/images/final.svg");
+        background-color: var( --color--state-end--icon-like--main-body);
+    }
+}
+
+/* init */
+
+.like-icon .contour {
+    transition: fill linear 0.1s;
+}
+
+.like-icon .core {
+    fill: transparent;
+    transition: fill linear 0.3s 0.03s;
+}
+
+.like-icon .main-body {
+    fill: transparent;
+    transition: fill linear 0.3s;
+}
+
+/* is-liked */
+
+.like-icon.is-liked .heart {
+    transform-origin: center;
+    animation: scale 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .sparks {
+    opacity: 0;
+    animation: sparks-opacity 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon.is-liked .initial {
+    fill: var(--color--state-start--icon-like--initial);
+    transition: fill linear 0.3s 0.06s;
+}
+
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body {
+    fill: var( --color--state-end--icon-like--core);
+}
+
+/* hover */
+
+.like-icon:hover .core {
+    fill: var( --color--state-start--icon-like--core);
+    transition: fill linear 0.3s;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--color--state-start--icon-like--main-body);
+    transition: fill linear 0.3s 0.05s;
+}
+
+.like-icon:hover .core {
+    fill: var(--color--state-start--icon-like--core);
+    transition: fill linear 0.3s;
+}
+
+/*active */
+.like-icon:active .core {
+    fill: var(  --color--state-end--icon-like--core);
+    transition: fill linear 0.3s;
+}
+
+.like-icon:active .main-body {
+    fill: var(--color--state-end--icon-like--main-body);
+    transition: fill linear 0.3s 0.05s;
+}
+
+.like-icon:active .contour {
+    fill: var(  --color--state-end--icon-like--core);
+    transition: fill linear 0.3s 0.3s;
+}
+
+.like-icon.is-liked .contour {
+    animation-duration: 0.3s;
+    animation-name: scaleAnimation;
+    fill: var(--color--state-end--icon-like--core);
+}
+
+.like-icon.is-liked .main-body {
+    animation-duration: 0.3s;
+    animation-name: scaleAnimation;
+    fill: var(--color--state-end--icon-like--main-body);
+}
+
+.like-icon.is-liked .core {
+    animation-duration: 0.3s;
+    animation-name: scaleAnimation;
+    fill: var(--color--state-end--icon-like--core);
+}
+
+@keyframes scaleAnimation {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: translate(-3px, -3px) scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.like-icon.is-liked .sparks {
+    animation: 0.3s 0.3s ease-in;
+    animation-name: likeSparks;
+}
+
+@keyframes likeSparks {
+    from {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+

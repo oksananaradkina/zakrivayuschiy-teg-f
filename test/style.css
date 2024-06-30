@@ -1,0 +1,29 @@
+.section__like{
+    display: flex;
+}
+.like-icon {
+    width: 39px;
+    height: 36px;
+    background-image: url("../images/initial.svg");
+    display: block;
+    content: "";
+    position: relative;
+}
+
+.image{
+    width: 39px;
+    height: 36px;
+}
+.like-icon.heart.contour {
+    transition: fill linear 0.1s;
+}
+
+.like-icon.heart.core {
+    fill: transparent;
+    transition: fill linear 0.3s 0.03s;
+}
+
+.like-icon.heart.main-body {
+    fill: transparent;
+    transition: fill linear 0.3s;
+}
