@@ -1,7 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root{
-    --color-black: #000000;
-    --color-green: #00CC14;
-    --color-white: #ffffff;
-    --color-red: #ff0000;
+:root {
+  --color-black: #000000;
+  --color-green: #00CC14;
+  --color-white: #ffffff;
+  --color-red: #ff0000;
+  --main-font: Inter, sans-serif;
+  --accent-font: PressStart2P, sans-serif;
+  --bold-text: 700;
+  --regular-text: 400;
+  --page-background-color: var(--color-white);
+  --page-background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7 .01%, #1a1a1a);
+  --accent-color: var(--color-black);
+  --button-text-color: var(--color-white);
+  --floppy-button: var(--color-white);
+  --box-shadow: var(--color-black);
+  --color--state-start--icon-like--main-body: var(--color-black);
+  --color--state-start--icon-like--core: var(--color-black);
+  --color--state-start--icon-like--initial: var(--color-black);
+  --color--state-end--icon-like--main-body: var(--color-red);
+  --color--state-end--icon-like--core: var(--color-red);
 }
