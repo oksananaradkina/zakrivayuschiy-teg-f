@@ -20,7 +20,6 @@
   font-size: 18px;
   max-inline-size: 700px;
   min-block-size: 100%;
-  block-size: 100vh;
   margin: 0 auto;
   background-image: var(--page-background-image);
   background-attachment: fixed;
@@ -248,8 +247,9 @@
   color: var(--page-background-color);
 }
 
-.card__like-button:focus {
+.card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--box-shadow);
+  outline: none;
 }
 
 .card__like-button::before {
@@ -316,10 +316,11 @@
   width: 21px;
 }
 
-.card__like-button:focus,
-.open-modal-button:focus,
-.close-modal-button:focus {
+.card__like-button:focus-visible,
+.open-modal-button:focus-visible,
+.close-modal-button:focus-visible {
   box-shadow: 2px 2px 0 var(--box-shadow);
+  outline: none;
 }
 
 .open-modal-button::before {
@@ -374,8 +375,7 @@
 
 .footer-content {
   display: flex;
-  width: 293px;
-  height: 63px;
+ align-items: center;
   gap: 20px;
 }
 
