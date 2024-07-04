@@ -27,7 +27,8 @@
   letter-spacing: 0.6px;
   color: var(--accent-color)
 }
-.dialog{
+
+.dialog {
   color: var(--accent-color);
 }
 
@@ -124,9 +125,11 @@
   padding: 25px 25px 22px;
   line-height: 21px;
 }
-.section__content p:not(:last-child){
+
+.section__content p:not(:last-child) {
   margin-bottom: 27px;
 }
+
 .image-container {
   position: relative;
   display: flex;
@@ -138,7 +141,7 @@
   inline-size: 100%;
 }
 
-.section.now .section__content{
+.section.now .section__content {
   padding-top: 21px;
 }
 
@@ -164,27 +167,6 @@
     text-stroke: 1px var(--page-background-color);
     text-shadow: none;
   }
-}
-.css-text {
-  top: 27px;
-  right: 8px;
-}
-
-.desigions-text {
-  width: 154px;
-  top: 27px;
-  right: 26px;
-}
-
-.care-text {
-  top: 27px;
-  right: 2px;
-}
-
-.suppert-text {
-  width: 126px;
-  top: 27px;
-  right: 28px;
 }
 
 .section__like {
@@ -337,12 +319,25 @@
 
 .modal {
   width: 357px;
-  height: 193px;
   border: 2px solid var(--accent-color);
   background-color: var(--page-background-color);
 }
 
 .close-modal-button {
+  display: flex;
+  width: 100%;
+  height: 38px;
+  border: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  padding: 9px 17px;
+  gap: 10px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
   inline-size: 293px;
   block-size: 38px;
   grid-column-end: span 2;
@@ -375,7 +370,8 @@
 
 .footer-content {
   display: flex;
- align-items: center;
+  align-items: center;
+  padding: 30px;
   gap: 20px;
 }
 
@@ -383,8 +379,6 @@
   flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
-  margin-top: 25px;
-  margin-left: 15px;
   aspect-ratio: 1 / 1;
   transition: mix-blend-mode 0.5s;
   fill: var(--accent-color);
@@ -397,23 +391,6 @@
   color: var(--button-text-color);
   mix-blend-mode: difference;
   line-height: 1.4rem;
-}
-
-.close-modal-button {
-  display: flex;
-  width: 293px;
-  height: 38px;
-  border: 2px solid var(--accent-color);
-  padding: 9px 17px;
-  gap: 10px;
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 12.6px;
-  text-align: center;
-  justify-content: center;
-  margin-left: 14px;
-  margin-top: 42px;
 }
 
 .modal::backdrop {
@@ -430,11 +407,11 @@
     gap: 3px;
   }
 
-  .open-modal-button .footer-image-min{
+  .open-modal-button .footer-image-min {
     width: 28px;
   }
 
-  .section{
+  .section {
     margin-bottom: 50px;
   }
 
@@ -443,7 +420,7 @@
     padding-top: 8px;
   }
 
-  .section__content{
+  .section__content {
     padding-top: 27px;
   }
 
@@ -467,7 +444,7 @@
     padding-left: 2px;
   }
 
-  .image-watermark{
+  .image-watermark {
     inset-inline-end: 11px;
     inset-block-start: 25px;
   }
